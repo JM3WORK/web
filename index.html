@@ -168,10 +168,64 @@
     margin: 10px;
 }
 
+/* Estilos para el menú de hamburguesa y el menú principal */
+.menu-mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu-mobile {
+        display: block;
+        text-align: right;
+        padding: 10px;
+    }
+    header {
+        display: none;
+    }
+
+    /* Estilos para el menú de hamburguesa */
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        margin: 6px auto;
+        transition: 0.4s;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
+/* Cambiar el fondo al hacer hover en los enlaces del menú */
+nav a:hover {
+    background-color: orange;
+}
 
     </style>
 </head>
 <body>
+
+<div class="menu-mobile">
+    <div class="hamburger" id="hamburger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+</div>
 
     <header>
         <div class="logo">
@@ -242,6 +296,16 @@
         </div>
     </div>
 </section>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.getElementById("hamburger");
+        const header = document.querySelector("header");
+
+        hamburger.addEventListener("click", function () {
+            header.classList.toggle("active");
+        });
+    });
+</script>
 
 </body>
 </html>
