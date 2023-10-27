@@ -307,13 +307,11 @@ nav a:hover {
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const hamburger = document.getElementById("hamburger");
-        const header = document.querySelector("menu-servicios");
+        const menuServicios = document.querySelector(".menu-servicios");
 
         hamburger.addEventListener("click", function () {
             hamburger.classList.toggle("active");
-            header.styles.display = "flex";
-            header.styles.flexDirection = "column";
-            
+            menuServicios.style.display = menuServicios.style.display === "flex" ? "none" : "flex";
         });
     });
 </script>
