@@ -115,6 +115,35 @@
                 width: 80px; /* Ancho del logotipo en dispositivos más pequeños */
             }
         }
+
+.servicios {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.servicio {
+    padding: 20px;
+}
+
+.caja-servicio {
+    display: flex;
+    padding: 5px;
+}
+
+a {
+    padding: 10px;
+    border-radius: 50%;
+    border: 1px solid white;
+    text-decoration: none;
+    color: white;
+}
+
+i {
+    color: white;
+    margin-right: 5px;
+}
+
     </style>
 </head>
 <body>
@@ -138,5 +167,56 @@
         <h1 class="section-title">Professional and Quality Cleaning</h1>
         <button class="contact-button">Contact us</button>
     </section>
+<section class="servicios">
+    <div class="servicio">
+        <div class="caja-servicio">
+            <a>
+                <i class="fa fa-check"></i>
+            </a>
+            <h2 class="nombre-servicio">Flooring</h2>
+        </div>
+    </div>
+    <div class="servicio">
+        <div class="caja-servicio">
+            <a>
+                <i class="fa fa-check"></i>
+            </a>
+            <h2 class="nombre-servicio">Kitchen</h2>
+        </div>
+    </div>
+    <div class="servicio">
+        <div class="caja-servicio">
+            <a>
+                <i class="fa fa-check"></i>
+            </a>
+            <h2 class="nombre-servicio">Bathrooms</h2>
+        </div>
+    </div>
+    <div class="servicio">
+        <div class="caja-servicio">
+            <a>
+                <i class="fa fa-check"></i>
+            </a>
+            <h2 class="nombre-servicio">Windows and doors</h2>
+        </div>
+    </div>
+    <div class "servicio">
+        <div class="caja-servicio">
+            <a>
+                <i class="fa fa-check"></i>
+            </a>
+            <h2 class="nombre-servicio">Cleaning</h2>
+        </div>
+    </div>
+    <div class="servicio">
+        <div class="caja-servicio">
+            <a>
+                <i class="fa fa-check"></i>
+            </a>
+            <h2 class="nombre-servicio">Painting</h2>
+        </div>
+    </div>
+</section>
+
 </body>
 </html>
