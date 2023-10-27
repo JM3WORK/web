@@ -224,10 +224,15 @@ nav a:hover {
             <img src="JM3.png" alt="Logo">
         </div>
     <div class="hamburger" id="hamburger">
-        <div class="bar">Contact</div>
-        <div class="bar">Services</div>
-        <div class="bar">Reviews</div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
     </div>
+        <nav class="menu-servicios" style="display: none">
+            <a href="#">Reviews</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
 </div>
 
     <header>
@@ -302,10 +307,13 @@ nav a:hover {
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const hamburger = document.getElementById("hamburger");
-        const header = document.querySelector("header");
+        const header = document.querySelector("menu-servicios");
 
         hamburger.addEventListener("click", function () {
             hamburger.classList.toggle("active");
+            header.style.display = "flex";
+            header.style.flexDirection = "column";
+            
         });
     });
 </script>
