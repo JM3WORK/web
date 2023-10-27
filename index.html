@@ -116,9 +116,11 @@
             }
         }
 
+/* ... Tus estilos previos ... */
+
 .servicios {
     display: flex;
-    justiyf-content: center;
+    justify-content: center;
     flex-wrap: wrap;
     background: black;
     color: white;
@@ -128,12 +130,14 @@
     display: flex;
     align-items: center;
     padding: 20px;
+    width: 100%; /* Ancho igual para todos los servicios */
 }
 
 .caja-servicio {
     display: flex;
     align-items: center;
     padding: 5px;
+    width: 100%; /* Ancho igual para todos los servicios */
 }
 
 .caja-servicio a {
@@ -146,14 +150,23 @@
     border: 1px solid white;
     text-decoration: none;
     color: white;
-margin: 5px;
+    margin: 5px;
+    background: #094AF3; /* Fondo azul */
 }
 
 .caja-servicio i {
     color: white;
     font-size: 24px; /* Tamaño del ícono */
     margin-right: 5px;
+    margin-left: 5px;
 }
+
+/* Aplicar el mismo estilo de fondo y bordes redondeados a los servicios */
+.servicio {
+    background: #094AF3;
+    border-radius: 10px;
+}
+
 
     </style>
 </head>
