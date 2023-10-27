@@ -118,23 +118,29 @@
 
 .servicios {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-background-color: black;
-    color: white;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Espacio entre los servicios */
 }
 
 .servicio {
+    display: flex;
+    align-items: center;
     padding: 20px;
 }
 
 .caja-servicio {
     display: flex;
+    align-items: center;
     padding: 5px;
 }
 
 a {
-    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px; /* Ancho del círculo */
+    height: 100px; /* Altura del círculo */
     border-radius: 50%;
     border: 1px solid white;
     text-decoration: none;
@@ -143,6 +149,7 @@ a {
 
 i {
     color: white;
+    font-size: 24px; /* Tamaño del ícono */
     margin-right: 5px;
 }
 
