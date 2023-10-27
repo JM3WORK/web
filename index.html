@@ -169,23 +169,8 @@
 }
 
 /* Estilos para el menú de hamburguesa y el menú principal */
-.menu-toggle {
+.menu-mobile {
     display: none;
-}
-
-.mobile-menu {
-    display: none;
-    flex-direction: column;
-    text-align: center;
-    background-color: rgba(0, 0, 0, 0.8);
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-}
-
-.menu-toggle.active .mobile-menu {
-    display: flex;
 }
 
 @media (max-width: 768px) {
@@ -199,31 +184,30 @@
     }
 
     /* Estilos para el menú de hamburguesa */
-   .hamburger {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-}
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
 
-.bar {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 6px auto;
-    transition: 0.4s;
-}
+    .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        margin: 6px auto;
+        transition: 0.4s;
+    }
 
-.hamburger.active .bar:nth-child(1) {
-    transform: rotate(-45deg) translate(-5px, 6px);
-}
+    .hamburger.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
 
-.hamburger.active .bar:nth-child(2) {
-    opacity: 0;
-}
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
 
-.hamburger.active .bar:nth-child(3) {
-    transform: rotate(45deg) translate(-5px, -6px);
-}
+    .hamburger.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
 }
 
 /* Cambiar el fondo al hacer hover en los enlaces del menú */
@@ -234,23 +218,29 @@ nav a:hover {
     </style>
 </head>
 <body>
+
+<div class="menu-mobile">
+    <div class="hamburger" id="hamburger">
+        <div class="bar">Contact</div>
+        <div class="bar">Services</div>
+        <div class="bar">Reviews</div>
+    </div>
+</div>
+
     <header>
         <div class="logo">
             <img src="JM3.png" alt="Logo">
         </div>
-       <div class="menu-toggle">
-    <div class="hamburger" id="hamburger">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-    </div>
-    <nav class="mobile-menu">
-        <a href="#">START</a>
-        <a href="#">OUR COMPANY</a>
-        <a href="#">PACKAGES</a>
-        <a href="#">CONTACT</a>
-    </nav>
-</div>
+        <nav>
+            <a href="#">START</a>
+            <a href="#">OUR COMPANY</a>
+            <a href="#">PACKAGES</a>
+            <a href="#">CONTACT</a>
+            <div>
+                <i class="fa fa-phone phone-icon"></i>
+                <span class="phone-number">+1 (321) 310-8155</span>
+            </div>
+        </nav>
     </header>
     <section class="main-section">
         <h1 class="section-title">Professional and Quality Cleaning</h1>
@@ -309,14 +299,13 @@ nav a:hover {
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const hamburger = document.getElementById("hamburger");
-        const menuToggle = document.querySelector(".menu-toggle");
+        const header = document.querySelector("header");
 
         hamburger.addEventListener("click", function () {
-            menuToggle.classList.toggle("active");
+            header.classList.toggle("active");
         });
     });
 </script>
-
 
 </body>
 </html>
