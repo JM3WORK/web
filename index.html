@@ -566,23 +566,7 @@ nav a:hover {
             });
         });
 
-      jQuery.noConflict(), jQuery(document).ready(function ($) {
-    const a = $(".img_before");
-    const slider = $(".slider");
-    const b = $(".img_before img").width();
-    const c = Math.round(b / 2);
-    a.width(c);
-
-    slider.on('input', function () {
-        const val = $(this).val();
-        const newWidth = b * (val / 100);
-        a.width(newWidth);
-    });
-
-    $(".before_after_slider").mouseleave(function () {
-        a.stop().animate({ width: c }, 1000);
-    });
-});
+    jQuery.noConflict(),jQuery(document).ready(function(){var a=jQuery(".img_before"),b=jQuery(".img_before img").width(),c=Math.round(b/2);a.width(c),jQuery(".before_after_slider").mousemove(function(b){var c=b.offsetX||b.clientX-jQueryimg_after.offset().left;a.width(c)}),jQuery(".before_after_slider").mouseleave(function(b){a.stop().animate({width:c},1e3)})});
 
     </script>
 
