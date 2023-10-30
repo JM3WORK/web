@@ -215,6 +215,26 @@ nav a:hover {
     background-color: orange;
 }
 
+.boton-flotante {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background-color: #007BFF;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        .boton-flotante select {
+            background-color: transparent;
+            color: white;
+            border: none;
+            font-size: 16px;
+        }
+
     </style>
 </head>
 <body>
@@ -304,6 +324,14 @@ nav a:hover {
         </div>
     </div>
 </section>
+<div class="boton-flotante">
+    <select>
+        <option value="ingles">Inglés</option>
+        <option value="frances">Francés</option>
+        <option value="espanol">Español</option>
+    </select>
+</div>
+
 <script>
     document.addEventListener("DOMContentLoaded", function () {
         const hamburger = document.getElementById("hamburger");
