@@ -246,7 +246,33 @@ nav a:hover {
     width: 100%;
 }
 
-        
+        .before_after_slider {
+    position: relative;
+    width: 100%;
+    max-width: 800px; /* Establece un ancho máximo */
+    margin: 0 auto; /* Centra horizontalmente */
+    overflow: hidden; /* Oculta el desbordamiento si las imágenes son más grandes */
+    box-sizing: border-box; /* Incluye el borde en el ancho y alto */
+
+    /* Establece una relación de aspecto 16:9 para mantener la proporción de la imagen */
+    padding-top: 56.25%; /* (9 / 16) * 100% */
+}
+
+.before_after_slider .img_after,
+.before_after_slider .img_before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.before_after_slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Escala la imagen para que llene el contenedor */
+    object-position: center; /* Centra la imagen vertical y horizontalmente */
+    transition: width 0.3s; /* Agrega una transición para el efecto */
+}
+
 
     </style>
 </head>
@@ -338,18 +364,19 @@ nav a:hover {
                 <a>
                     <i class="fa fa-check"></i>
                 </a>
-                <h2 class="nombre-servicio">Flooring</h2>
+                <h2 class="nombre-servicio">Kitchen</h2>
             </div>
             <div class="explicacion-servicio" data-service="kitchen" style="display: none">
-                <div class="before_after_slider" style="position: relative; width: 800px; height: 450px; margin: auto;">
-                    <div class="img_after" style="position: absolute; width: 100%;">
-                        <img src="2.png" width="800" height="450" alt="" />
+                <div class="before_after_slider">
+                        <div class="img_after">
+                            <img src="3.png" alt="">
+                        </div>
+                        <div class="img_before">
+                            <img src="1.png" alt="">
+                        </div>
                     </div>
-                    <div class="img_before" style="position: absolute; overflow: hidden; border-right: solid 4px #FFF;">
-                        <img src="1.png" width="800" height="450" alt="" />
-                    </div>
-                </div>
-                <h2>Flooring Services (Servicios de Pisos)</h2>
+
+                <h2>Kitchen Services (Servicios de Pisos)</h2>
                 <p>JM3 is your partner in creating the kitchen of your dreams. Our kitchen services range from complete kitchen renovations to cabinet installation and countertop upgrades. We combine functional design with top-notch craftsmanship to make your kitchen the heart of your home.</p>
             </div>
         </div>
