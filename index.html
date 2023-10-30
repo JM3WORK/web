@@ -450,24 +450,24 @@ nav a:hover {
         });
 
         // Obtener todos los elementos .caja-servicio
-        const cajaServicios = document.querySelectorAll('.caja-servicio');
+const cajaServicios = document.querySelectorAll('.caja-servicio');
 
-        // Agregar un controlador de clic a cada .caja-servicio
-        cajaServicios.forEach(cajaServicio => {
-            cajaServicio.addEventListener('click', () => {
-                // Obtener el servicio correspondiente
-                const servicioData = cajaServicio.getAttribute('data-service');
-                const explicacionServicio = document.querySelector(`.explicacion-servicio[data-service="${servicioData}"]`);
+// Agregar un controlador de clic a cada .caja-servicio
+cajaServicios.forEach(cajaServicio => {
+    cajaServicio.addEventListener('click', () => {
+        // Obtener el servicio correspondiente
+        const servicioData = cajaServicio.dataset.service;
+        const explicacionServicio = document.querySelector(`.explicacion-servicio[data-service="${servicioData}"]`);
 
-                // Mostrar u ocultar la explicación del servicio
-                if (explicacionServicio.style.display === 'none' || explicacionServicio.style.display === '') {
-                    explicacionServicio.style.display = 'block';
-                } else {
-                    explicacionServicio.style.display = 'none';
-                }
-            });
-        });
+        // Mostrar u ocultar la explicación del servicio
+        if (explicacionServicio.style.display === 'block' || explicacionServicio.style.display === '') {
+            explicacionServicio.style.display = 'none';
+        } else {
+            explicacionServicio.style.display = 'block';
+        }
     });
+});
+
 </script>
 <script type="text/javascript" type="module">
 //<![CDATA[
