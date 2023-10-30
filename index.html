@@ -488,44 +488,50 @@ nav a:hover {
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="module">
-         jQuery(document).ready(function ($) {
+      jQuery(document).ready(function ($) {
     // Código para el cambio de "Antes" y "Después"
-    const switchText = $(".switch");
     const imgAntes = $(".antes");
     const imgDespues = $(".despues");
-    let switchInterval;
+    const switch1 = $(".switch1");
+    const switch2 = $(".switch2");
 
-    // Función para alternar entre "Antes" y "Después"
+    // Variable para controlar el estado actual (Antes o Después)
+    let estadoActual = "Antes";
+
+    // Función para alternar entre "Antes" y "Después" y animar los cambios
     function toggleState() {
-        if (switchText.text() === "Antes") {
-            switchText.text("Después");
-            imgAntes.css("opacity", "0");
-            imgDespues.css("opacity", "1");
+        if (estadoActual === "Antes") {
+            estadoActual = "Después";
+
+            // Animación de opacidad
+            imgAntes.animate({ opacity: 0 }, 500);
+            imgDespues.animate({ opacity: 1 }, 500);
+
+            // Cambio del texto
+            switch1.hide();
+            switch2.show();
         } else {
-            switchText.text("Antes");
-            imgAntes.css("opacity", "1");
-            imgDespues.css("opacity", "0");
+            estadoActual = "Antes";
+
+            // Animación de opacidad
+            imgAntes.animate({ opacity: 1 }, 500);
+            imgDespues.animate({ opacity: 0 }, 500);
+
+            // Cambio del texto
+            switch1.show();
+            switch2.hide();
         }
     }
 
-    // Función para iniciar el ciclo automático
-    function startAutoToggle() {
-        switchInterval = setInterval(toggleState, 3000);
+    // Función para iniciar el bucle
+    function startLoop() {
+        setInterval(toggleState, 5000);
     }
 
-    // Inicia el ciclo automáticamente
-    startAutoToggle();
-
-    // Pausa el cambio al mover el mouse sobre la sección
-    $(".antesydespues").on("mouseenter", function () {
-        clearInterval(switchInterval);
-    });
-
-    // Reanuda el cambio al mover el mouse fuera de la sección
-    $(".antesydespues").on("mouseleave", function () {
-        startAutoToggle();
-    });
+    // Inicia el bucle al cargar la página
+    startLoop();
 });
+
 
         
         document.addEventListener("DOMContentLoaded", function () {
