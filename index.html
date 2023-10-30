@@ -251,28 +251,6 @@ nav a:hover {
     border-radius: 10px;
 }
 
-.before_after_slider {
-    position: relative;
-    width: 800px;
-    height: 450px;
-    margin: auto;
-}
-
-.before_after_slider .img_after,
-.before_after_slider .img_before {
-    position: absolute;
-    width: 100%;
-}
-
-.before_after_slider .img_before {
-    overflow: hidden;
-    border-right: solid 4px #FFF;
-}
-
-.before_after_slider img {
-    width: 100%;
-    height: auto;
-}
 
 
         
@@ -326,13 +304,15 @@ nav a:hover {
         </div>
     </div>
             <div class="explicacion-servicio">
-                <div class="before_after_slider">
-            <div class="img_after">
-                <img src="2.png" alt="" />
-            </div>
-            <div class="img_before">
-                <img src="1.png" alt="" />
-            </div>
+               <div class="before_after_slider" style="position: relative; width: 800px; height: 450px; margin: auto;">
+                    <div class="img_after" style="position: absolute; width: 100%;">
+                        <img src="2.png" width="800" height="450" alt="" />
+                    </div>
+                
+                    <div class="img_before" style="position: absolute; overflow: hidden; border-right: solid 4px #FFF;">
+                        <img src="1.png" width="800" height="450" alt="" />
+                    </div>
+                </div>
         </div>
 
         <div class="explicacion-text">
