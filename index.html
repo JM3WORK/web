@@ -249,7 +249,7 @@ nav a:hover {
 
     .antesydespues {
     position: relative;
-    width: 800px; /* Ancho de la imagen */
+
     height: 450px; /* Alto de la imagen */
     margin: auto;
     overflow: hidden;
@@ -489,38 +489,43 @@ nav a:hover {
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="module">
          jQuery(document).ready(function ($) {
-            // Código para el cambio de "Antes" y "Después"
-            const switchText = $(".switch");
-            const imgAntes = $(".antes");
-            const imgDespues = $(".despues");
-            let switchInterval;
+    // Código para el cambio de "Antes" y "Después"
+    const switchText = $(".switch");
+    const imgAntes = $(".antes");
+    const imgDespues = $(".despues");
+    let switchInterval;
 
-            // Función para alternar entre "Antes" y "Después"
-            function toggleState() {
-                if (switchText.text() === "Antes") {
-                    switchText.text("Después");
-                    imgAntes.css("opacity", "0");
-                    imgDespues.css("opacity", "1");
-                } else {
-                    switchText.text("Antes");
-                    imgAntes.css("opacity", "1");
-                    imgDespues.css("opacity", "0");
-                }
-            }
+    // Función para alternar entre "Antes" y "Después"
+    function toggleState() {
+        if (switchText.text() === "Antes") {
+            switchText.text("Después");
+            imgAntes.css("opacity", "0");
+            imgDespues.css("opacity", "1");
+        } else {
+            switchText.text("Antes");
+            imgAntes.css("opacity", "1");
+            imgDespues.css("opacity", "0");
+        }
+    }
 
-            // Inicia el cambio automático entre "Antes" y "Después" cada 3 segundos
-            switchInterval = setInterval(toggleState, 3000);
+    // Función para iniciar el ciclo automático
+    function startAutoToggle() {
+        switchInterval = setInterval(toggleState, 3000);
+    }
 
-            // Pausa el cambio al mover el mouse sobre la sección
-            $(".antesydespues").on("mouseenter", function () {
-                clearInterval(switchInterval);
-            });
+    // Inicia el ciclo automáticamente
+    startAutoToggle();
 
-            // Reanuda el cambio al mover el mouse fuera de la sección
-            $(".antesydespues").on("mouseleave", function () {
-                switchInterval = setInterval(toggleState, 3000);
-            });
-        });
+    // Pausa el cambio al mover el mouse sobre la sección
+    $(".antesydespues").on("mouseenter", function () {
+        clearInterval(switchInterval);
+    });
+
+    // Reanuda el cambio al mover el mouse fuera de la sección
+    $(".antesydespues").on("mouseleave", function () {
+        startAutoToggle();
+    });
+});
 
         
         document.addEventListener("DOMContentLoaded", function () {
