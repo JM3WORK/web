@@ -451,24 +451,24 @@ nav a:hover {
     });
 
 
-  // Obtener todos los elementos .servicio
-    const servicios = document.querySelectorAll('.servicio');
+// Obtener todos los elementos .caja-servicio
+    const cajaServicios = document.querySelectorAll('.caja-servicio');
 
-    // Agregar un controlador de clic a cada .servicio
-    servicios.forEach(servicio => {
-        servicio.addEventListener('click', () => {
-            // Ocultar todas las .explicacion-servicio
-            document.querySelectorAll('.explicacion-servicio').forEach(explicacion => {
-                explicacion.style.display = 'none';
-            });
-
-            // Mostrar la .explicacion-servicio correspondiente al servicio clicado
-            const servicioData = servicio.getAttribute('data-service');
+    // Agregar un controlador de clic a cada .caja-servicio
+    cajaServicios.forEach(cajaServicio => {
+        cajaServicio.addEventListener('click', () => {
+            // Obtener el servicio correspondiente
+            const servicioData = cajaServicio.parentElement.getAttribute('data-service');
             const explicacionServicio = document.querySelector(`.explicacion-servicio[data-service="${servicioData}"]`);
-            explicacionServicio.style.display = 'block';
+
+            // Mostrar o ocultar la explicación del servicio
+            if (explicacionServicio.style.display === 'none') {
+                explicacionServicio.style.display = 'block';
+            } else {
+                explicacionServicio.style.display = 'none';
+            }
         });
     });
-
 
 </script>
 <script type="text/javascript" type="module">
