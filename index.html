@@ -317,7 +317,44 @@ nav a:hover {
                 width: 100%;
             }
         }
+  .formulario {
+            color: #fff;
+            margin: 0 20px;
+            font-size: 18px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            width: 80%;
+            max-width: 400px;
+            margin: 0 auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
 
+        .formulario label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .formulario input, .formulario textarea, .formulario select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .formulario button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .formulario button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
@@ -560,6 +597,32 @@ Personalized Solutions: They understand that every property is unique, and they 
         </div>
     </div>
 
+    
+   <div class="formulario">
+        <h2>Contact Us</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="telephone">Telephone:</label>
+            <input type="tel" id="telephone" name="telephone" required>
+            
+            <label for="service">Service:</label>
+            <select id="service" name="service" required>
+                <option value="Bathrooms">Bathrooms</option>
+                <option value="Flooring">Flooring</option>
+                <option value="Kitchen">Kitchen</option>
+                <option value="Windows and Doors">Windows and Doors</option>
+                <option value="Cleaning">Cleaning</option>
+                <option value="Painting">Painting</option>
+            </select>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 
 <div class="boton-flotante">
     <select>
