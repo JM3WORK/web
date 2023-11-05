@@ -117,6 +117,33 @@
             }
         }
 
+         .seccion-ventajas {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .imagen {
+            flex: 1;
+            border-radius: 10px;
+            margin: 10px;
+        }
+
+        .descripcion {
+            flex: 2;
+            text-align: center;
+            margin: 10px;
+        }
+
+        .seccion-ventajas:nth-child(odd) {
+            background-color: orange;
+        }
+
+        .seccion-ventajas:nth-child(even) {
+            background-color: black;
+            color: white; /* Cambiamos el color del texto en las secciones negras para mayor legibilidad */
+        }
+
 /* ... Tus estilos previos ... */
 
 .servicios {
