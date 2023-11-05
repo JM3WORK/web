@@ -631,6 +631,7 @@ Personalized Solutions: They understand that every property is unique, and they 
 </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="module">
       jQuery(document).ready(function ($) {
     // Código para el cambio de "Antes" y "Después"
@@ -706,6 +707,24 @@ Personalized Solutions: They understand that every property is unique, and they 
                 });
             });
         });
+
+         (function() {
+            emailjs.init("user_Ym-r4wRWklw_FuxE"); // Reemplaza "user_Ym-r4wRWklw_FuxE" con tu API Key
+
+            document.getElementById('myForm').addEventListener('submit', function(event) {
+                event.preventDefault();
+                emailjs.sendForm('service_yjv3csk', 'template_6p4nxd5', this)
+                    .then(function(response) {
+                        console.log('Correo electrónico enviado', response);
+                        // Puedes mostrar un mensaje de éxito al usuario aquí
+                    }, function(error) {
+                        console.log('Error al enviar el correo electrónico', error);
+                        // Puedes mostrar un mensaje de error al usuario aquí
+                    });
+            });
+        })();
+
+        
 
     jQuery.noConflict(),jQuery(document).ready(function(){var a=jQuery(".img_before"),b=jQuery(".img_before img").width(),c=Math.round(b/2);a.width(c),jQuery(".before_after_slider").mousemove(function(b){var c=b.offsetX||b.clientX-jQueryimg_after.offset().left;a.width(c)}),jQuery(".before_after_slider").mouseleave(function(b){a.stop().animate({width:c},1e3)})});
 
