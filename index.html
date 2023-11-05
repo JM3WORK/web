@@ -621,6 +621,7 @@ Personalized Solutions: They understand that every property is unique, and they 
             
             <button type="submit">Submit</button>
         </form>
+        <div id="mensaje"></div>
     </div>
 
 
@@ -710,18 +711,19 @@ Personalized Solutions: They understand that every property is unique, and they 
             });
         });
 
-         (function() {
+        (function() {
             emailjs.init("user_Ym-r4wRWklw_FuxE"); // Reemplaza "user_Ym-r4wRWklw_FuxE" con tu API Key
 
             document.getElementById('myForm').addEventListener('submit', function(event) {
                 event.preventDefault();
+
                 emailjs.sendForm('service_yjv3csk', 'template_6p4nxd5', this)
                     .then(function(response) {
                         console.log('Correo electrónico enviado', response);
-                        // Puedes mostrar un mensaje de éxito al usuario aquí
+                        document.getElementById('mensaje').innerHTML = 'Mensaje enviado con éxito. Gracias.';
                     }, function(error) {
                         console.log('Error al enviar el correo electrónico', error);
-                        // Puedes mostrar un mensaje de error al usuario aquí
+                        document.getElementById('mensaje').innerHTML = 'Error al enviar el mensaje. Por favor, inténtalo de nuevo.';
                     });
             });
         })();
