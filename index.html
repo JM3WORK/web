@@ -368,24 +368,28 @@ nav a:hover {
 
         .videos {
             display: flex;
-            justify-content: space-between;
+            justify-content: space-evenly;
             flex-wrap: wrap;
             margin-top: 20px;
         }
 
+        .video{
 
-        .heart-icon {
-            color: black;
-            cursor: pointer;
-            position: absolute;
-            top: 10px;
-            left: 10px;
-            font-size: 24px;
-            z-index: 1;
-        }
+            margin: 10px;
+    }
 
-        .heart-icon.clicked {
-            color: red;
+
+        .like-icon {
+    color: black; /* Cambia el color a tu preferencia */
+    cursor: pointer;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+
+}
+
+       .like-icon.clicked {
+            color: blue;
         }
     </style>
 </head>
@@ -633,18 +637,20 @@ Personalized Solutions: They understand that every property is unique, and they 
         <h1>We Work</h1>
         <div class="videos">
             <div class="video">
-                    <video controls>
-                        <source src="JM32.mp4" type="video/mp4" style="width: 200px;">
+                    <video controls style="width: 200px;">
+                        <source src="JM32.mp4" type="video/mp4" >
                         Tu navegador no admite el elemento de video.
                     </video>
-                <i class="fas fa-heart heart-icon"></i>
+                <i class="fas fa-thumbs-up like-icon"></i>
+
             </div>
             <div class="video">
-                    <video controls>
-                        <source src="JM32.mp4" type="video/mp4" style="width: 200px;">
+                    <video controls style="width: 200px;">
+                        <source src="JM32.mp4" type="video/mp4">
                         Tu navegador no admite el elemento de video.
                     </video>
-                <i class="fas fa-heart heart-icon"></i>
+                <i class="fas fa-thumbs-up like-icon"></i>
+
             </div>
         </div>
     </div>
