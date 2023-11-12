@@ -9,6 +9,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@500&display=swap" rel="stylesheet">
+      <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+    />
+    <script
+        src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+    ></script>
     <style>
         /* Estilos generales */
         body {
@@ -426,6 +433,10 @@ footer {
     text-decoration: underline;
 }
 
+          #map {
+            width: 100%;
+            height: 400px;
+        }
     </style>
 </head>
 <body>
@@ -689,7 +700,7 @@ Personalized Solutions: They understand that every property is unique, and they 
             </div>
         </div>
     </div>
-    
+      <div id="map"></div>
     
    <div class="formulario">
         <h2>Contact Us</h2>
@@ -739,6 +750,23 @@ Personalized Solutions: They understand that every property is unique, and they 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="module">
+
+
+         // Inicializar el mapa en la ubicación especificada
+        var map = L.map('map').setView([28.5425, -81.379], 15); // Cambia las coordenadas y el nivel de zoom según tu ubicación
+
+        // Añadir una capa de mapa base de OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+        }).addTo(map);
+
+        // Añadir un marcador en la ubicación deseada
+        var marker = L.marker([28.5425, -81.379]).addTo(map);
+
+        // Añadir un popup al marcador
+        marker.bindPopup("<b>111 N Orange Ave, Orlando, FL 32801</b>").openPopup();
+
+        
       jQuery(document).ready(function ($) {
     // Código para el cambio de "Antes" y "Después"
     const imgAntes = $(".antes");
