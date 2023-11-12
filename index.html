@@ -373,25 +373,6 @@ nav a:hover {
             margin-top: 20px;
         }
 
-        .video {
-            width: calc(50% - 20px);
-            margin: 10px;
-            position: relative;
-        }
-
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
-            height: 0;
-            overflow: hidden;
-        }
-
-        video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-        }
 
         .heart-icon {
             color: black;
@@ -652,21 +633,17 @@ Personalized Solutions: They understand that every property is unique, and they 
         <h1>We Work</h1>
         <div class="videos">
             <div class="video">
-                <div class="video-container">
                     <video controls>
-                        <source src="JM32.mp4" type="video/mp4">
+                        <source src="JM32.mp4" type="video/mp4" style="width: 200px;">
                         Tu navegador no admite el elemento de video.
                     </video>
-                </div>
                 <i class="fas fa-heart heart-icon"></i>
             </div>
             <div class="video">
-                <div class="video-container">
                     <video controls>
-                        <source src="JM32.mp4" type="video/mp4">
+                        <source src="JM32.mp4" type="video/mp4" style="width: 200px;">
                         Tu navegador no admite el elemento de video.
                     </video>
-                </div>
                 <i class="fas fa-heart heart-icon"></i>
             </div>
         </div>
