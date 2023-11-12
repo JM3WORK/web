@@ -394,6 +394,38 @@ nav a:hover {
        .like-icon.clicked {
             color: blue;
         }
+
+        /* Estilos para el footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Estilos para los enlaces del footer */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* Estilos para los enlaces al pasar el ratón */
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
     </style>
 </head>
 <body>
@@ -694,7 +726,16 @@ Personalized Solutions: They understand that every property is unique, and they 
         <option value="espanol">Español</option>
     </select>
 </div>
-
+<footer>
+    <div class="footer-links">
+        <ul>
+            <li><a href="#">Company Policies</a></li>
+            <li><a href="#">Legal Notice</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+        </ul>
+    </div>
+</footer>
+    
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
       <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="module">
