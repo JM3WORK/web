@@ -282,16 +282,16 @@ nav a:hover {
 }
 
     .antesydespues {
-    position: relative;
-
-    height: 450px; /* Alto de la imagen */
+    height: 250px; /* Alto de la imagen */
     margin: auto;
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-wrap: wrap;
 }
 
 .antesydespues .antes,
 .antesydespues .despues {
-    position: absolute;
     width: 100%;
     height: 100%;
     transition: opacity 0.3s; /* Agrega una transición para la opacidad */
@@ -487,15 +487,20 @@ footer {
             </div>
             <div class="explicacion-servicio" data-service="bathrooms" style="display: none">
                <div class="antesydespues">
-                    <div class="antes">
-                        <img src="1.png" alt="">
+                    <div class="box-antesydespues">
+                        <div class="antes">
+                            <img src="1.png" alt="">
+                        </div>
+                        <div class="despues">
+                            <img src="3.png" alt="">
+                        </div>
                     </div>
-                    <div class="despues">
-                        <img src="3.png" alt="">
-                    </div>
-                </div>
-                            <h3 class="switch1">BEFORE</h3>
+                   <div>
+                        <h3 class="switch1">BEFORE</h3>
                             <h3 class="switch2" style="display:none">AFTER</h3>
+                   </div>
+                </div>
+                           
 
                 <h2>Bathroom Services</h2>
                 <p>Let JM3 revamp your bathroom into a luxurious retreat. Our bathroom services include tiling, fixtures, and complete bathroom remodels. We pay attention to every detail, ensuring your bathroom not only looks stunning but also functions seamlessly.</p>
