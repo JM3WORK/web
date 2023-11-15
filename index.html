@@ -502,17 +502,20 @@ footer {
 
 <div class="menu-mobile">
     <div class="logo">
-            <img src="JM3.png" alt="Logo">
-        </div>
+    <a href="index.html">
+        <img src="JM3.png" alt="Logo">
+    </a>
+</div>
+
     <div class="hamburger" id="hamburger">
         <div class="bar"></div>
         <div class="bar"></div>
         <div class="bar"></div>
     </div>
         <nav class="menu-servicios" style="display: none">
-            <a href="#">Reviews</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
         </nav>
 </div>
 
@@ -521,10 +524,9 @@ footer {
             <img src="JM3.png" alt="Logo">
         </div>
         <nav>
-            <a href="#">START</a>
-            <a href="#">OUR COMPANY</a>
-            <a href="#">PACKAGES</a>
-            <a href="#">CONTACT</a>
+          <a href="#reviews">Reviews</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
             <div>
                 <i class="fa fa-phone phone-icon"></i>
                 <span class="phone-number">+1 (321) 310-8155</span>
@@ -535,7 +537,7 @@ footer {
         <h1 class="section-title">Professional and Quality Cleaning</h1>
         <button class="contact-button">Contact us</button>
     </section>
-<section class="servicios">
+<section class="servicios" id="services">
     <div class="caja-all">
         <div class="servicio" data-service="bathrooms">
             <div class="caja-servicio">
@@ -765,7 +767,7 @@ Personalized Solutions: They understand that every property is unique, and they 
         </div>
     </div>
 
-    <div class="reviews-section">
+    <div class="reviews-section" id="reviews">
     <h1 style="color: white;">JM3 Reviews</h1>
     <div class="review-container">
         <div class="review">
@@ -809,7 +811,7 @@ Personalized Solutions: They understand that every property is unique, and they 
 
       <div id="map"></div>
     
-   <div class="formulario">
+   <div class="formulario" id="contact">
         <h2>Contact Us</h2>
         <form id="myForm">
             <label for="name">Name:</label>
