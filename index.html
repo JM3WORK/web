@@ -497,6 +497,37 @@ footer {
     }
 }
 
+
+.resultadostrabajos-container {
+    display: flex;
+    overflow: hidden;
+}
+
+.resultadostrabajo {
+    width: 300px;
+    margin-right: 20px;
+}
+
+.resultadostrabajo img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Animación de desplazamiento de las imágenes */
+@keyframes scrollImages {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.resultadostrabajos-container {
+    display: flex;
+    overflow: hidden;
+    animation: scrollImages 10s linear infinite;
+}
     </style>
 </head>
 <body>
@@ -675,6 +706,37 @@ footer {
         </div>
     </div>
 </section>
+
+  <h1 id="titulo">Screen Process</h1>
+
+    <div class="resultadostrabajos-container">
+        <div class="resultadostrabajo">
+            <img src="Screen1.jpg" alt="Resultado 1">
+        </div>
+        <div class="resultadostrabajo">
+            <img src="screen2.jpg" alt="Resultado 2">
+        </div>
+        <div class="resultadostrabajo">
+            <img src="screen3.jpg" alt="Resultado 3">
+        </div>
+        <div class="resultadostrabajo">
+            <img src="screen4.jpg" alt="Resultado 4">
+        </div>
+        <div class="resultadostrabajo">
+            <img src="screen5.jpg" alt="Resultado 5">
+        </div>
+        <div class="resultadostrabajo">
+            <img src="screen6.jpg" alt="Resultado 6">
+        </div>
+        <div class="resultadostrabajo">
+            <img src="screen7.jpg" alt="Resultado 7">
+        </div>
+        <div class="resultadostrabajo">
+            <img src="screen8.jpg" alt="Resultado 8">
+        </div>
+    </div>
+
+    
 <section class="results-section">
     <h1 class="section-title" style="text-align: center; ">BEFORE AND AFTER</h1>
     <div class="before_after_slider" style="position: relative; width: 400px; height: 225px; margin: auto;">
