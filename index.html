@@ -552,6 +552,32 @@ footer {
     height: auto;
     margin-right: 10px;
   }
+
+
+        /* Estilos para la sección */
+        .latido {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #4CAF50; /* Fondo verde */
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Sombra brillante */
+        }
+
+        /* Estilos para el icono con efecto de latido */
+        .icono-latido {
+            font-size: 48px;
+            animation: latido 1s infinite alternate; /* Efecto de latido en bucle */
+        }
+
+        @keyframes latido {
+            0% {
+                transform: scale(1);
+            }
+            100% {
+                transform: scale(1.2);
+            }
+        }
     </style>
 </head>
 <body>
@@ -750,7 +776,9 @@ footer {
     <img src="bathroom2.JPG" alt="Image 7">
   </div>
 </div>
- 
+   <div class="latido">
+        <span class="icono-latido">&#62;</span> <!-- Icono ">" con efecto de latido -->
+    </div>
     
 <section class="results-section">
     <h1 class="section-title" style="text-align: center; ">BEFORE AND AFTER</h1>
